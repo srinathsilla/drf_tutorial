@@ -8,15 +8,14 @@ class ProductSerializer(serializers.ModelSerializer):
     edit_url = serializers.SerializerMethodField(read_only=True)
     url = serializers.HyperlinkedIdentityField(view_name="product-detail")
     title = serializers.CharField(validators=[validate_title_no_hello, unique_product_title])
-    name = serializers.CharField(source='title', read_only=True)
     class Meta:
         model = Product
         fields = [
+            #'user',
             'url',
             'edit_url',
             'pk',
             'title',
-            'name',
             'content',
             'price',
             'sale_price',
