@@ -1,6 +1,6 @@
 import requests
 
-# always make sure to end url with trailing slash when sending params and request data over get request,
+# always make sure to end the url with trailing slash when sending params and request data like json over get request,
 endpoint = "http://127.0.0.1:8001/api/"
 
 #get_response = requests.get(endpoint)   # HTTP Request
