@@ -7,7 +7,7 @@ endpoint = "http://127.0.0.1:8001/api/"
 #get_response = requests.get(endpoint, json={"query":"Hello World!"})    # {'args': {}, 'data': '{"query": "Hello World!"}'..}
 #get_response = requests.get(endpoint, data={"query":"Hello World!"})    #{'args': {}, 'data': '', 'files': {}, 'form': {'query': 'Hello World!'} ..}
 
-get_response = requests.get(endpoint, params={"abc":123}, json={"query":"Hello World"})
+get_response = requests.post(endpoint, params={"abc":123}, json={"title":"Abc123","content":"Hello World","price":"ABC123"})
 
 #print(get_response.headers)
 #print(get_response.text)    # print raw text response
